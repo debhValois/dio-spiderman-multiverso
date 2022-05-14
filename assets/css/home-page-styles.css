@@ -1,0 +1,161 @@
+@import url('/assets/css/reset.css');
+@import url('/assets/css/global.css');
+
+body {
+  background-color: var(--primary-color); /* global.css */
+}
+
+body::before { /* pseudoElemento virtual utilizado ANTES */
+  content: ""; /* conteúdo vazio */
+  background-image: url('/assets/images/spider-man-background.jpg'); /* imagem back */
+  background-repeat: no-repeat; /* não se repetir caso passe do tamanho */
+  background-position: center;
+  background-size: cover; /* respeite toda área do elemento */
+  width: 100%;
+  height: 100%;
+  position: absolute; /* fica por cimm do body */
+  opacity: 0.2; /* transparência de 20% */
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out; /* fade da animação da troca dos backgrounds */
+}
+
+.s-menu {
+  padding: 1rem 0; /* size relativo = 1rem x 16px do font-size no reset.css */
+  /* medida <rem> = bom para escabilidade no resize e na responsividade */
+  width: 100%;
+  text-align: center;
+  position: relative; /* para ficar por cima do body::before */
+}
+
+.s-menu__item {
+  display: inline-block; /* itens ficam lado-a-lado e block aceita margens etc */
+  text-transform: uppercase; /* maiúsculas */
+  margin: 0 1.25rem;
+}
+
+.s-menu__icon {
+  width: 2.5rem;
+  margin: 0 1.25rem;
+  vertical-align: middle;
+}
+
+.s-container { /* que envolve todos os 3 cards */
+  position: relative; /* para ficar por cima do body::before */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.s-card {
+  border: 0.5rem solid white; /* calculo = 40px / 16px = 0.5rem */
+  width: calc(100% / 3 - 8%); /* de 100% do container / por 3 cards - 8% espaçamento q fica legal */ 
+  height: 70vh; /* unid. medida relativa view port = área de visão disponível p usuário */
+  /* vh = altura | vw = largura */
+  position: relative; /* para ficar por cima do body::before */
+  transition: filter .5s ease-in-out; /* fade do filtro P&B dos cards não selecionados */
+}
+
+.s-card__background {
+  width: 100%; /* respeita o tam do elemento pai: s-card */
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 1; /* anime do mouse pra sumir */
+  transition: opacity 1s ease-in-out; /* fade do anime do mouseOver no spiderMan */
+}
+
+.s-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* encaixar dentro do container dele */
+  position: relative;
+  transition: 1s ease-in-out; /* fade do anime do mouseOver no spiderMan */
+}
+
+.s-card__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute; /* ficar em cima do card e logo depois do spiderMan */
+  width: 100%;
+  bottom: 0;
+  transition: bottom 1s ease-in-out; */ /* fade do anime do NOME */
+}
+
+.s-controller {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.s-controller__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%; /* círculo perfeito */
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold; /* negrito */
+  cursor: pointer;
+  z-index: 1; /* para que a linha não cubra os círculos */
+  transition: transform 0.3s ease-in-out; /* anime fade dos Btns - trans. suave */
+}
+
+.s-controller__button:hover { /* mouse em cima da bolinha */ 
+  transform: scale(1.1); /* aumentar 10% */
+}
+
+/* MARGENS PARA DISTANCIAR OS BOTÕES UM DO OUTRO */
+.s-controller__button:nth-child(2) { /* pegar o segundo elemento dessa classe */
+  margin: 0 3.75rem; /* aplicar a margem */
+}
+
+.s-controller__line {
+  background-color: white;
+  width: 50%;
+  height: 2px;
+  position: absolute; /* para bolinhas ficarem acima da linha */ 
+}
+
+/* Hover Animation */
+
+.s-card--hovered .s-card__background {
+  cursor: pointer;
+  opacity: 0; /* backgr precisa sumir para ver o que ha atrás */
+}
+
+.s-card--hovered .s-card__image {
+  transform: scale(1.4);  /* efeito do spiderMan indo prá frente */
+  filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5)); /* sombra projetada */
+}
+
+/* ALTERAR BACKGROUNDS PELOS IDS */
+
+body#spider-man-01-hovered::before {
+  background-image: url('/assets/images/pic-sm-bg-01.jpg');
+}
+
+body#spider-man-02-hovered::before {
+  background-image: url('/assets/images/pic-sm-bg-02.jpg');
+}
+
+body#spider-man-03-hovered::before {
+  background-image: url('/assets/images/pic-sm-bg-03.jpg');
+}
+
+body[id^="spider-man-"]::before {
+  opacity: 1;
+}
+
+body[id^="spider-man-"] .s-card:not(.s-card--hovered) {
+  filter: grayscale(100%); /* deixa P&B os cards não selecionados */
+}
+
+.s-card--hovered .s-card__title { /* joga o nome mais ou menos p centro */
+  bottom: 50%;
+}

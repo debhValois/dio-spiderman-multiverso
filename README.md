@@ -1,7 +1,4 @@
-<h1 align="center">
-  <img alt="Aranha" title="spider-man" src="./assets/images/icons/spider.svg" width="50px"/>
-  SPIDER-MAN MULTIVERSO
-</h1>
+<h1 align="center"> SPIDER-MAN <img alt="Aranha" title="spider-man" src="./assets/images/icons/spider.svg" width="50px"/> MULTIVERSO </h1>
 <p align="center"> Status <☕> EM CONSTRUÇÃO de 12 à 20 maio 2022 <☕/></p>
 
 # 

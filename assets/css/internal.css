@@ -1,0 +1,30 @@
+@import url('reset.css');
+@import url('global.css');
+@import url('components/_navigator.css');
+
+.s-wrapper {
+  display: flex;
+  height: 100vh; /* VH = medida relativa só na parte visivel da tela */
+  /* Redimensionável. Não cria barra de rolagem - Responsivity 100% */
+  flex-flow: row nowrap; 
+  background-color: aqua; 
+}
+
+.s-wrapper .s-left-column {
+  width: 100px; /* FIXO */
+  height: 100%; /* ACOMPANHA SIZE DA DIV */
+  background-color: black;
+  display: flex;
+  /* CENTRALIZAR TUDO TANTO HORIZONTAL QTO VERTICAL : */
+  justify-content: center;
+  align-items: center;
+}
+
+.s-wrapper .s-main-content{
+  height: 100%; /* RELATIVO */
+  width: 100%; /* ACOMPANHA SIZE DA DIV */
+  background-color: gray;
+  padding-left: 30px;
+}
+
+

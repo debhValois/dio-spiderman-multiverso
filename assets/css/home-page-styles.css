@@ -93,7 +93,7 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
   position: absolute; /* ficar em cima do card e logo depois do spiderMan */
   width: 100%;
   bottom: 0;
-  transition: bottom 1s ease-in-out; */ /* fade do anime do NOME */
+  transition: bottom 1s ease-in-out; /* fade do anime do NOME */
 }
 
 .s-controller { /* Pai de todos os botões */

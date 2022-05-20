@@ -43,16 +43,31 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  perspective: 3000px; /* 3D - aplicar no elemento Pai do carousel */
 }
 
 .s-card {
   border: 0.5rem solid white; /* calculo = 40px / 16px = 0.5rem */
-  width: calc(100% / 3 - 8%); /* de 100% do container / por 3 cards - 8% espaçamento q fica legal */ 
-  height: 70vh; /* unid. medida relativa view port = área de visão disponível p usuário */
+  width: 100%; /* ocupe 100% do elemento Pai = Bandeja = .s-cards-carousel */
+  height: 50vh; /* unid. medida relativa view port = área de visão disponível p usuário */
   /* vh = altura | vw = largura */
-  position: relative; /* para ficar por cima do body::before */
+  position: absolute; /* relative para ficar por cima do body::before */
   transition: filter .5s ease-in-out; /* fade do filtro P&B dos cards não selecionados */
 }
+
+/* TRANSFORM - POSICIONAMENTO DOS CARDS - 3D */
+.s-card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(50vw); /* deg = degrees = graus */
+}
+
+.s-card:nth-child(2) {
+  transform: rotateY(120deg) translateZ(50vw);
+}
+
+.s-card:nth-child(3) {
+  transform: rotateY(240deg) translateZ(50vw);
+}
+
 
 .s-card__background {
   width: 100%; /* respeita o tam do elemento pai: s-card */
@@ -81,12 +96,14 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
   transition: bottom 1s ease-in-out; */ /* fade do anime do NOME */
 }
 
-.s-controller {
-  position: relative;
+.s-controller { /* Pai de todos os botões */
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  bottom: 1.5rem; /* distancia da parte de baixo do navegador */
+  width: 100%;
 }
 
 .s-controller__button {
@@ -113,6 +130,14 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
 /* MARGENS PARA DISTANCIAR OS BOTÕES UM DO OUTRO */
 .s-controller__button:nth-child(2) { /* pegar o segundo elemento dessa classe */
   margin: 0 3.75rem; /* aplicar a margem */
+}
+
+/* BORDA EXTRA DO BOTÃO ATIVO */
+.s-controller__button--active {
+  background-color: white;
+  color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);/* 1ª borda da bolinha*/
+  outline: 0.125rem solid white;/* criar 2ª borda externa a 1ª borda */
 }
 
 .s-controller__line {
@@ -158,4 +183,13 @@ body[id^="spider-man-"] .s-card:not(.s-card--hovered) {
 
 .s-card--hovered .s-card__title { /* joga o nome mais ou menos p centro */
   bottom: 50%;
+}
+
+ /* CARROUSSEL - BANDEJA GIRATÓRIA 3D */
+.s-cards-carousel{
+  display: flex;
+  justify-content: center;
+  width: calc(100vw / 3 - 10%); /* ocupe: 100vw (largura útil) / por 3 cards - 10% espaçamento*/ 
+  transform-style: preserve-3d; /* os elementos filhos devem manter as próprias configs 3D */
+  transition: transform 0.4s ease-in;
 }

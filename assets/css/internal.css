@@ -1,21 +1,28 @@
 @import url('reset.css');
 @import url('global.css');
 @import url('components/_navigator.css');
+@import url('components/_pills.css');
+@import url('components/_link-button.css');
+@import url('components/_gallery.css');
 
 .s-wrapper {
   display: flex;
   height: 100vh; /* VH = medida relativa só na parte visivel da tela */
   /* Redimensionável. Não cria barra de rolagem - Responsivity 100% */
-  flex-flow: row nowrap; 
-  background-color: aqua; 
+  flex-flow: row nowrap;  
 }
+
+/*.s-wrapper video{ 
+  position: fixed;
+  background-size:cover;
+}*/ /* OPÇÃO 2 : BACKGROUND DE VÍDEO */
 
 .s-wrapper .s-left-column {
   width: 100px; /* FIXO */
   height: 100%; /* ACOMPANHA SIZE DA DIV */
   background-color: black;
   display: flex;
-  /* CENTRALIZAR TUDO TANTO HORIZONTAL QTO VERTICAL : */
+  /* CENTRALIZAR TUDO TANTO HORIZONTAL QTO VERTICAL: */
   justify-content: center;
   align-items: center;
 }
@@ -23,8 +30,9 @@
 .s-wrapper .s-main-content{
   height: 100%; /* RELATIVO */
   width: 100%; /* ACOMPANHA SIZE DA DIV */
-  background-color: gray;
+  /* background-color: gray; */
   padding-left: 30px;
+  /* position: relative; */ /* ATIVAR QUANDO USAR A OPÇÃO 2 : VIDEO BCKGR */
 }
 
 .s-wrapper .s-main-content__top {
@@ -34,22 +42,21 @@
   justify-content: flex-start; /* ITENS DE CIMA PARA BAIXO */
 }
 
-/* GALERIA DE FOTOS */
-.s-wrapper .s-main-content__bottom{
+.s-wrapper .s-main-content__bottom{ /* GALERIA DE FOTOS */
   height: 20vh; /* ALTURA 20% DA VIEW PORT */
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* ITENS DE BAIXO PARA CIMA */
 }
 
-.s-wrapper .s-main-content .s-logo img{
+.s-wrapper .s-main-content .s-logo img{ /* LOGO SPIDER-MAN */
   margin-top: 50px;
   margin-left: 0;
   margin-bottom: 30px;
 }
 
-.s-wrapper .s-main-content__top .s-description{
-  background-color: rgba(0,0,0,.7);
+.s-wrapper .s-main-content__top .s-description{ /* TEXTO */
+  background-color: rgba(0,0,0,.7); /* 70 DE OPACITY = LEVE TRANSPARÊNCIA */
   max-width: 50%;
   padding: 20px;
   border-radius: 10px;
@@ -57,14 +64,14 @@
 
 .s-wrapper .s-main-content__top .s-description .s-description__text p{
   color: white;
-  line-height: 170%;
+  line-height: 170%; /* DISTÂNCIA ENTRE LINHAS */
 }
 
 .s-wrapper .s-main-content__top .s-description .pills{
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* ESPAÇO ENTRE PILLS E DESCRIPTION */
 }
 
-.s-wrapper .s-main-content .s-links{
+.s-wrapper .s-main-content .s-links{ /* BTN LINK TRAILLER */
   padding: 20px;
   padding-left: 0;
 }
@@ -74,6 +81,7 @@
   flex-direction: row;
 }
 
+/* CHAMADAS DOS BACKGROUNDS  */
 .s-spiderman-01-01 {
   background-image: url('../images/spiderman-tobey/movie-01/background.png');
   background-size:cover;

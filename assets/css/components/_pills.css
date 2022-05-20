@@ -1,0 +1,17 @@
+.pills ul{ /* LISTA NÃO ORDENADA */
+  display: flex;
+  flex-direction: row; /* UM ITEM AO LADO DO OUTRO NA HORIZONTAL */
+}
+
+.pills ul li{
+  background-color: var(--primary-color); /* VEIO DO GLOBAL.CSS */
+  color: white;
+  padding: 5px 15px; /* ESPAÇO DAS BORDAS */
+  margin: 0 10px; /* ENTRE UM TEXTO E OUTRO */
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.pills ul li:first-child{
+  margin-left: 0;
+}

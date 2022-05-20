@@ -4,16 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../assets/css/internal.css">
+  <link rel="stylesheet" href="../../assets/css/internal.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
   <title>Multiverso | Spiderman</title>
 </head>
 <body>
   <div class="s-wrapper"> <!-- Envelopa toda page - Responsivity -->
 
+    <!-- <<< OPÇÃO 2 : BACKGROUND DE VÍDEO >>> -->
+    <!-- <video loop autoplay muted>
+      <source src="../../assets/videos/spiderman-2002-trailer-teste.mp4" type="video/mp4"> -->
+    <!-- << Obs: suporte apenas para navegador chrome. Mp4 não funciona p Firefox.
+    Ideal é ter o mesmo vídeo com várias extensões pensando tem todos os browsers.
+    Alterações em internal.css >> -->
+    <!-- </video>  -->
+
     <!-- MENU LATERAL - FIXO EM width:100px -->
-    <div class="s-left-column"> 
+    <aside class="s-left-column"> 
       
-     <!--  NAVIGATOR.CSS - digitar: nav>ul>li*3>a -->
+     <!-- COMPONENT : _NAVIGATOR.CSS - digitar: nav>ul>li*3>a -->
       <nav class="navigator">
 
         <!--  ÍCONE - digitar: div.navigator__icon>a>image  --> 
@@ -30,18 +39,84 @@
         </ul>
       </nav>
 
-    </div>
+    </aside>
 
-    <!-- CONTEÚDO - RELATIVO -->
-    <div class="s-main-content">
+    <!-- CONTEÚDO - RELATIVO --> 
 
-    </div>
+    <!-- P/ OPÇÃO 1: BCKGR IMAGE = Inserir class: s-spiderman-01-01 -->
+    <!-- P/ OPÇÃO 2: BCKGR VÍDEO = Retirar class: s-spiderman-01-01 -->
+    <main class="s-main-content s-spiderman-01-01"><!-- CHAMADA BACKGROUND:INTERNAL.CSS -->
 
+      <section class="s-main-content__top">
+        <div class="s-logo">
+          <img src="../../assets/images/spiderman-tobey/movie-01/logo.png" alt="Spiderman (2002)"
+            title="Spiderman (2002)" />
+        </div>
+        <!-- COMPONENT : _PILLS -->
+        <div class="s-description">
+          <div class="pills">
+            <ul>
+              <li>Ano: 2002</li>
+              <li>Diretor: Sam Raimi</li>
+            </ul>
+          </div>
 
+          <div class="s-description__text"> <!-- STRONG = NEGRITO -->
+            <p><strong>Sinopse:</strong>&nbsp;Depois de ser picado por uma aranha geneticamente modificada em uma
+              demonstração científica, o jovem nerd Peter Parker ganha superpoderes. Inicialmente, ele pretende usá-los
+              para para ganhar dinheiro, adotando o nome de Homem-Aranha e se apresentando em lutas de exibição. Porém,
+              ao presenciar o assassinando de seu tio Ben e sentir-se culpado, Peter decide não mais usar seus poderes
+              para proveito próprio e sim para enfrentar o mal, tendo como seu primeiro grande desafio o psicótico
+              Duende Verde.</p>
+          </div>
+        </div>
+
+        <!-- BTN LINK TRAILLER PURO CSS SEM IMAGE -->
+        <div class="s-links">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=TYMMOjBUPMM" class="link-button" target="_blank">
+                <span class="icon">
+                  <div class="play-icon">&nbsp;</div> <!-- receber icone do play via css -->
+                </span>
+                <span class="label">
+                  Assistir trailer
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- GALERIA DE FOTOS | digitar: div.gallery>ul>li*3>a>image-->
+      <section class="s-main-content__bottom">
+        <div class="gallery"> <!-- href = imgs gdes | src = imgs pqs -->
+          <ul>
+            <li> 
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-01-full.jpg"><img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-01.png"></img>
+              </a> <!-- data-fancybox = id para lib -->
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-02-full.jpg"><img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-02.png"></img>
+              </a> <!-- data-fancybox = id para lib -->
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-03-full.jpg"><img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-03.png"></img>
+              </a> <!-- data-fancybox = id para lib -->
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </div>
 
-
-
+  <!-- LIB FANCYBOX - GALLERY IMAGES -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+      //AGUARDAR AULA
+    </script>
 </body>
 </html>
+
+<!-- https://www.youtube.com/watch?v=0IY5TJwAbcQ  1:22:18 -->
 

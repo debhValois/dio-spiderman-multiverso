@@ -82,6 +82,8 @@
 }
 
 /* CHAMADAS DOS BACKGROUNDS  */
+
+/* 01 - TOBEY */
 .s-spiderman-01-01 {
   background-image: url('../images/spiderman-tobey/movie-01/background.png');
   background-size:cover;
@@ -96,6 +98,34 @@
   background-image: url('../images/spiderman-tobey/movie-03/background.png');
   background-size: cover;
 }
+
+/* 02 - TOM */
+.s-spiderman-02-01 {
+  background-image: url('../images/spiderman-tom/movie-01/background.png');
+  background-size:cover;
+}
+
+.s-spiderman-02-02 {
+  background-image: url('../images/spiderman-tom/movie-02/background.png');
+  background-size: cover;
+}
+
+.s-spiderman-02-03 {
+  background-image: url('../images/spiderman-tom/movie-03/background.png');
+  background-size: cover;
+}
+
+/* 03 - ANDREW */
+.s-spiderman-03-01 {
+  background-image: url('../images/spiderman-andrew/movie-01/background.png');
+  background-size:cover;
+}
+
+.s-spiderman-03-02 {
+  background-image: url('../images/spiderman-andrew/movie-02/background.png');
+  background-size: cover;
+}
+
 
 
 

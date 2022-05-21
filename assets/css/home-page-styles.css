@@ -1,5 +1,5 @@
-@import url('/assets/css/reset.css');
-@import url('/assets/css/global.css');
+@import url('./reset.css');
+@import url('./global.css');
 
 body {
   background-color: var(--primary-color); /* global.css */
@@ -7,7 +7,7 @@ body {
 
 body::before { /* pseudoElemento virtual utilizado ANTES */
   content: ""; /* conteúdo vazio */
-  background-image: url('/assets/images/spider-man-background.jpg'); /* imagem back */
+  background-image: url('../images/spider-man-background.jpg'); /* imagem back */
   background-repeat: no-repeat; /* não se repetir caso passe do tamanho */
   background-position: center;
   background-size: cover; /* respeite toda área do elemento */
@@ -157,17 +157,17 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
   filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5)); /* sombra projetada */
 }
 
-/* ALTERAR BACKGROUNDS PELOS IDS */
+/* ALTERAR BACKGROUNDS PELOS IDS */ 
 body#spider-man-01-hovered::before {
-  background-image: url('/assets/images/pic-sm-bg-01.jpg');
+  background-image: url('../images/pic-sm-bg-01.jpg');
 }
 
-body#spider-man-02-hovered::before {
-  background-image: url('/assets/images/pic-sm-bg-02.jpg');
+body#spider-man-02-hovered::before { 
+  background-image: url('../images/pic-sm-bg-02.jpg');
 }
 
 body#spider-man-03-hovered::before {
-  background-image: url('/assets/images/pic-sm-bg-03.jpg');
+  background-image: url('../images/pic-sm-bg-03.jpg');
 }
 
 body[id^="spider-man-"]::before {

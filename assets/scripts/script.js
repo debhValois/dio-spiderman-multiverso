@@ -1,6 +1,6 @@
-//Autora: Debh Valois | Data 12 à 20/05/2022 | Origem Code: LiveCoding DIO
+//Autora: Debh Valois | Data 12 à 21/05/2022 | Origem Code: LiveCoding DIO
 
-/* MOUSE - card-hover-animation - EFEITOS + DESAPARECER IMG + p&b */
+/* MOUSE - card-hover-animation - EFECTS + DISAPPEAR IMG + p&b */
 function handleMouseEnter() { // qdo mouse passar em cima do elemento 
     this.classList.add('s-card--hovered'); // use os efeitos dessa classe
     document.body.id = `${this.id}-hovered`; // pegue imagem pelo ID
@@ -37,11 +37,8 @@ function selectCarouselItem(selectedButtonElement) {
 
   carousel.style.transform = newTransform;
 
-  /* TROCA DOS BTNS CONTROLLER */
+  /* CHANGE BTNS CONTROLLER */
   const activeButtonElement = document.querySelector('.s-controller__button--active');
   activeButtonElement.classList.remove('s-controller__button--active');
   selectedButtonElement.classList.add('s-controller__button--active');
 }
-
-/* https://www.youtube.com/watch?v=0IY5TJwAbcQ
-20/05/2022 - video 1:58:57 - MICHELE*/

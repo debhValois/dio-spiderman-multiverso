@@ -11,12 +11,18 @@
 <body>
   <div class="s-wrapper">
     
-    <video loop autoplay muted>
+    <!-- <<< OPTION 2 : VÍDEO BACKGROUND >>> -->
+    <!-- <video loop autoplay muted>
       <source src="../../assets/videos/spiderman2-2004-trailer.mp4" type="video/mp4" />
-    </video>
+    </video> -->
 
-    <div class="s-left-column">
+    <!-- MENU LATERAL - FIXO EM width:100px -->
+    <aside class="s-left-column">
+
+      <!-- COMPONENT : _NAVIGATOR.CSS - digitar: nav>ul>li*3>a -->
       <nav class="navigator">
+
+        <!--  ICON - digitar: div.navigator__icon>a>image  -->
         <div class="navigator__icon">
           <a href="../../index.html">
             <img src="../../assets/images/icons/spiderman1.png" />
@@ -28,19 +34,25 @@
           <li><a href="spiderman3.html">03</a></li>
         </ul>
       </nav>
-    </div>
+    </aside>
 
-    <div class="s-main-content">
-      <div class="s-main-content__top">
+    <!-- CONTEÚDO - RELATIVO --> 
+
+    <!--P/ OPÇÃO 1: BCKGR c/ IMAGE = Inserir a class: s-spiderman-01-02-->
+    <!--P/ OPÇÃO 2: BCKGR c/ VÍDEO = Retirar a class: s-spiderman-01-02-->
+    <main class="s-main-content s-spiderman-01-02"><!--Call BACKGROUND in INTERNAL.CSS-->
+      
+      <section class="s-main-content__top">
         <div class="s-logo">
-          <img src="../../assets/images/spiderman-tobey/movie-02/logo.png" alt="Spiderman (2002)"
+          <img src="../../assets/images/spiderman-tobey/movie-02/logo.png" alt="Spider-Man Tobey Filme 2004"
             title="Spiderman (2002)" />
         </div>
 
+        <!-- COMPONENT : _PILLS -->
         <div class="s-description">
           <div class="pills">
             <ul>
-              <li>Ano: 2002</li>
+              <li>Ano: 2004</li>
               <li>Diretor: Sam Raimi</li>
             </ul>
           </div>
@@ -55,12 +67,13 @@
           </div>
         </div>
 
+        <!-- BTN LINK TRAILLER PURO CSS SEM IMAGE -->
         <div class="s-links">
           <ul>
             <li>
               <a href="https://www.youtube.com/watch?v=TYMMOjBUPMM" class="link-button" target="_blank">
                 <span class="icon">
-                  <div class="play-icon">&nbsp;</div>
+                  <div class="play-icon">&nbsp;</div> <!--receber icone do play via css-->
                 </span>
                 <span class="label">
                   Assistir trailer
@@ -69,35 +82,35 @@
             </li>
           </ul>
         </div>
+      </section>
 
-      </div>
-
-      <div class="s-main-content__bottom">
+      <!-- PHOTOS GALLERY | digitar: div.gallery>ul>li*3>a>image -->
+      <section class="s-main-content__bottom">
         <div class="gallery">
           <ul>
             <li>
-              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-01-full.jpg">
-                <img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-01.png" alt="">
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-02/gallery/image-01-full.jpg">
+                <img src="../../assets/images/spiderman-tobey/movie-02/gallery/image-01.png" alt="">
               </a>
             </li>
             <li>
-              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-02-full.jpg">
-                <img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-02.png" alt="">
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-02/gallery/image-02-full.jpg">
+                <img src="../../assets/images/spiderman-tobey/movie-02/gallery/image-02.png" alt="">
               </a>
             </li>
             <li>
-              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-03-full.jpg">
-                <img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-03.png" alt="">
+              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-02/gallery/image-03-full.jpg">
+                <img src="../../assets/images/spiderman-tobey/movie-02/gallery/image-03.png" alt="">
               </a>
             </li>
           </ul>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </div>
+
+  <!-- LIB FANCYBOX - GALLERY IMAGES -->
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-  <script>
-    //  JavaScript will go here
-  </script>
+  <script></script>
 </body>
 </html>

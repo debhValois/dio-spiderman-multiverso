@@ -1,62 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spider-Man | Andrew Garfield 1</title>
-  <link href="../../assets/css/internal.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="../../assets/images/icons/spiderman1-andrew.png" type='image/png'>
+  <link rel="stylesheet" href="../../assets/css/internal.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+  
+  <title>2014 Andrew Garfield</title>
 </head>
-
 <body>
-  <div class="s-wrapper">
+  <div class="s-wrapper"> <!-- Envelopa toda page - Responsivity -->
 
-    <video autoplay loop>
-      <source src="../../assets/videos/amazing-spiderman2-2014-trailer.mp4" type="video/mp4" />
-    </video>
+    <!-- <<< OPTION 2 : VÍDEO BACKGROUND >>> -->
+    <!-- <video loop autoplay muted>
+      <source src="../../assets/videos/spiderman-2014-trailer-teste.mp4" type="video/mp4"> -->
+    <!-- << Obs: suporte apenas para navegador chrome. Mp4 não funciona p Firefox.
+    Ideal é ter o mesmo vídeo com várias extensões pensando tem todos os browsers.
+    Alterações em internal.css >> -->
+    <!-- </video>  -->
 
-    <!--  Coluna da esquerda com menu (Left Column with menu)  -->
-    <div class="s-left-column">
+    <!-- MENU LATERAL - FIXO EM width:100px -->
+    <aside class="s-left-column"> 
+      
+     <!-- COMPONENT : _NAVIGATOR.CSS - digitar: nav>ul>li*3>a -->
       <nav class="navigator">
+
+        <!--  ICON - digitar: div.navigator__icon>a>image  --> 
         <div class="navigator__icon">
           <a href="../../index.html">
-            <img src="../../assets/images/icons/spiderman1-andrew.png" />
+            <image src="../../assets/images/icons/spiderman1-andrew.png"></image>
           </a>
         </div>
+
         <ul>
-          <li><a href="spiderman1.html">01</a></li>
-          <li><a href="#02" class="active">02</a></li>
+          <li><a href="./spiderman1.html">01</a></li>
+          <li><a href="#02">02</a></li>
         </ul>
       </nav>
-    </div>
-    <!-- FIM - Coluna da esquerda com menu (Left Column with menu)  -->
 
-    <div class="s-main-content">
-      <div class="s-main-content__top">
+    </aside>
+
+    <!-- CONTEÚDO - RELATIVO --> 
+
+    <!--P/ OPÇÃO 1: BCKGR c/ IMAGE = Inserir a class: s-spiderman-02-02-->
+    <!--P/ OPÇÃO 2: BCKGR c/ VÍDEO = Retirar a class: s-spiderman-02-02-->
+    <main class="s-main-content s-spiderman-02-02"><!--Call BACKGROUND in INTERNAL.CSS-->
+
+      <section class="s-main-content__top">
         <div class="s-logo">
-          <img src="../../assets/images/spiderman-andrew/movie-02/logo.png" alt="Spiderman 2 (2005)"
-            title="Spiderman 2 (2005)" />
+          <img src="../../assets/images/spiderman-andrew/movie-02/logo.png" alt="Spider-Man Andrew Filme 2014"
+            title="Spider-Man (2014)" />
         </div>
 
+        <!-- COMPONENT : _PILLS -->
         <div class="s-description">
           <div class="pills">
             <ul>
-              <li>Ano: 2005</li>
+              <li>Ano: 2014</li>
               <li>Diretor: Sam Raimi</li>
             </ul>
           </div>
-          <div class="s-description__text">
-            <p><strong>Sinopse:</strong>&nbsp;Quando uma falha na experiência de fusão nuclear resulta em uma explosão que mata sua esposa, o Dr. Otto Octavius é transformado em Dr. Octopus, um ciborgue com tentáculos de metal. Doc Ock culpa o Homem-Aranha pelo acidente e quer vingança. Enquanto isso, o alter ego do herói, Peter Parker, perde seus poderes. Para complicar as coisas, o seu melhor amigo odeia o Homem-Aranha e sua amada fica noiva..</p>
+
+          <div class="s-description__text"> <!-- STRONG = NEGRITO -->
+            <p><strong>Sinopse:</strong>&nbsp;Depois de ser picado por uma aranha geneticamente modificada em uma
+              demonstração científica, o jovem nerd Peter Parker ganha superpoderes. Inicialmente, ele pretende usá-los
+              para para ganhar dinheiro, adotando o nome de Homem-Aranha e se apresentando em lutas de exibição. Porém,
+              ao presenciar o assassinando de seu tio Ben e sentir-se culpado, Peter decide não mais usar seus poderes
+              para proveito próprio e sim para enfrentar o mal, tendo como seu primeiro grande desafio o psicótico
+              Duende Verde.</p>
           </div>
         </div>
 
+        <!-- BTN LINK TRAILLER PURO CSS SEM IMAGE -->
         <div class="s-links">
           <ul>
             <li>
-              <a href="#" class="link-button">
+              <a href="https://www.youtube.com/watch?v=TYMMOjBUPMM" class="link-button" target="_blank">
                 <span class="icon">
-                  <div class="play-icon">&nbsp;</div>
+                  <div class="play-icon">&nbsp;</div> <!--receber icone do play via css-->
                 </span>
                 <span class="label">
                   Assistir trailer
@@ -65,18 +88,32 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
 
-      <div class="s-main-content__bottom">
-        <div class="gallery">
+      <!-- PHOTOS GALLERY | digitar: div.gallery>ul>li*3>a>image -->
+      <section class="s-main-content__bottom">
+        <div class="gallery"> <!-- href = imgs gdes | src = imgs pqs -->
           <ul>
-            <li><a href="#"><img src="../../assets/images/spiderman-andrew/movie-02/gallery/image-01.png" alt=""></a></li>
-            <li><a href="#"><img src="../../assets/images/spiderman-andrew/movie-02/gallery/image-02.png" alt=""></a></li>
-            <li><a href="#"><img src="../../assets/images/spiderman-andrew/movie-02/gallery/image-03.png" alt=""></a></li>
+            <li> 
+              <a data-fancybox href="../../assets/images/spiderman-andrew/movie-02/gallery/image-01-full.jpg"><img src="../../assets/images/spiderman-andrew/movie-02/gallery/image-01.png"></img>
+              </a> <!-- data-fancybox = id para lib -->
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-andrew/movie-02/gallery/image-02-full.jpg"><img src="../../assets/images/spiderman-andrew/movie-02/gallery/image-02.png"></img>
+              </a> <!-- data-fancybox = id para lib -->
+            </li>
+            <li>
+              <a data-fancybox href="../../assets/images/spiderman-andrew/movie-02/gallery/image-03-full.jpg"><img src="../../assets/images/spiderman-andrew/movie-02/gallery/image-03.png"></img>
+              </a> <!-- data-fancybox = id para lib -->
+            </li>
           </ul>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </div>
+
+  <!-- LIB FANCYBOX - GALLERY IMAGES -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script></script>
 </body>
-</html>
+</html> 

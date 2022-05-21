@@ -81,9 +81,9 @@
   flex-direction: row;
 }
 
-/* CHAMADAS DOS BACKGROUNDS  */
+/* CALLS BACKGROUNDS  */
 
-/* 01 - TOBEY */
+/* 01 - TOBEY: 2002/2004/2007 */
 .s-spiderman-01-01 {
   background-image: url('../images/spiderman-tobey/movie-01/background.png');
   background-size:cover;
@@ -99,32 +99,34 @@
   background-size: cover;
 }
 
-/* 02 - TOM */
+/* 02 - ANDREW: 2012/2014 */
 .s-spiderman-02-01 {
-  background-image: url('../images/spiderman-tom/movie-01/background.png');
-  background-size:cover;
-}
-
-.s-spiderman-02-02 {
-  background-image: url('../images/spiderman-tom/movie-02/background.png');
-  background-size: cover;
-}
-
-.s-spiderman-02-03 {
-  background-image: url('../images/spiderman-tom/movie-03/background.png');
-  background-size: cover;
-}
-
-/* 03 - ANDREW */
-.s-spiderman-03-01 {
   background-image: url('../images/spiderman-andrew/movie-01/background.png');
   background-size:cover;
 }
 
-.s-spiderman-03-02 {
+.s-spiderman-02-02 {
   background-image: url('../images/spiderman-andrew/movie-02/background.png');
   background-size: cover;
 }
+
+/* 03 - TOM: 2017/2019/2021 */
+.s-spiderman-03-01 {
+  background-image: url('../images/spiderman-tom/movie-01/background.png');
+  background-size:cover;
+}
+
+.s-spiderman-03-02 {
+  background-image: url('../images/spiderman-tom/movie-02/background.png');
+  background-size: cover;
+}
+
+.s-spiderman-03-03 {
+  background-image: url('../images/spiderman-tom/movie-03/background.png');
+  background-size: cover;
+}
+
+
 
 
 

@@ -49,7 +49,7 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
 .s-card {
   border: 0.5rem solid white; /* calculo = 40px / 16px = 0.5rem */
   width: 100%; /* ocupe 100% do elemento Pai = Bandeja = .s-cards-carousel */
-  height: 50vh; /* unid. medida relativa view port = área de visão disponível p usuário */
+  height: 60vh; /* unid. medida relativa view port = área de visão disponível p usuário */
   /* vh = altura | vw = largura */
   position: absolute; /* relative para ficar por cima do body::before */
   transition: filter .5s ease-in-out; /* fade do filtro P&B dos cards não selecionados */
@@ -191,5 +191,5 @@ body[id^="spider-man-"] .s-card:not(.s-card--hovered) {
   justify-content: center;
   width: calc(100vw / 3 - 10%); /* ocupe: 100vw (largura útil) / por 3 cards - 10% espaçamento*/ 
   transform-style: preserve-3d; /* os elementos filhos devem manter as próprias configs 3D */
-  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in; /* efeito Fade da rotação */
 }

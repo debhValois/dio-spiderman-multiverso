@@ -1,5 +1,6 @@
-//console.log("Olá Mundo")
+//Autora: Debh Valois | Data 12 à 20/05/2022 | Origem Code: LiveCoding DIO
 
+/* MOUSE - card-hover-animation - EFEITOS + DESAPARECER IMG + p&b */
 function handleMouseEnter() { // qdo mouse passar em cima do elemento 
     this.classList.add('s-card--hovered'); // use os efeitos dessa classe
     document.body.id = `${this.id}-hovered`; // pegue imagem pelo ID
@@ -25,7 +26,22 @@ function handleMouseEnter() { // qdo mouse passar em cima do elemento
   //chamar a função somente após a page ter sido completamente carregada
 
 
+/* CAROUSEL - ROTATE CARDS */
+function selectCarouselItem(selectedButtonElement) {
+  const selectedItem = selectedButtonElement.id;
+  const carousel = document.querySelector('.s-cards-carousel');
+  const transform = carousel.style.transform;
+  const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i); /* regex => regular expressions */
+  const rotateYDeg = -120 * (Number(selectedItem) - 1); /* calc : 360º / 3 cards = 120 */
+  const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`);
 
-/* https://www.youtube.com/watch?v=a29-lfFi9Qc 12/05/2022
-date: 13/05 | timer video: 01:19:15
-sujet: JS card-hover-animation.js */
+  carousel.style.transform = newTransform;
+
+  /* TROCA DOS BTNS CONTROLLER */
+  const activeButtonElement = document.querySelector('.s-controller__button--active');
+  activeButtonElement.classList.remove('s-controller__button--active');
+  selectedButtonElement.classList.add('s-controller__button--active');
+}
+
+/* https://www.youtube.com/watch?v=0IY5TJwAbcQ
+1:58:57 - MICHELE*/

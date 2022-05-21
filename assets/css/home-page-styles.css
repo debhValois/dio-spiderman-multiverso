@@ -49,7 +49,7 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
 .s-card {
   border: 0.5rem solid white; /* calculo = 40px / 16px = 0.5rem */
   width: 100%; /* ocupe 100% do elemento Pai = Bandeja = .s-cards-carousel */
-  height: 60vh; /* unid. medida relativa view port = área de visão disponível p usuário */
+  height: 70vh; /* unid. medida relativa view port = área de visão disponível p usuário */
   /* vh = altura | vw = largura */
   position: absolute; /* relative para ficar por cima do body::before */
   transition: filter .5s ease-in-out; /* fade do filtro P&B dos cards não selecionados */
@@ -67,7 +67,6 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
 .s-card:nth-child(3) {
   transform: rotateY(240deg) translateZ(50vw);
 }
-
 
 .s-card__background {
   width: 100%; /* respeita o tam do elemento pai: s-card */
@@ -147,8 +146,7 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
   position: absolute; /* para bolinhas ficarem acima da linha */ 
 }
 
-/* Hover Animation */
-
+/* HOVER ANIMATION */
 .s-card--hovered .s-card__background {
   cursor: pointer;
   opacity: 0; /* backgr precisa sumir para ver o que ha atrás */
@@ -160,7 +158,6 @@ body::before { /* pseudoElemento virtual utilizado ANTES */
 }
 
 /* ALTERAR BACKGROUNDS PELOS IDS */
-
 body#spider-man-01-hovered::before {
   background-image: url('/assets/images/pic-sm-bg-01.jpg');
 }

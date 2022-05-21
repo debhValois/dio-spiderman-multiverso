@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/icons/spiderman1.png" type='image/png'>
     <link rel="stylesheet" href="/assets/css/home-page-styles.css" class="rel">
-    <script src="/assets/scripts/script.js"></script>
     <title>Spider-Man | Multiversos</title>
   </head>
   <body>
 
-    <!-- PAGES -->
+    <!-- INTERNAL PAGES LINKS -->
     <nav class="s-menu">
       <ul>
         <li class="s-menu__item">
@@ -19,9 +19,9 @@
         <li class="s-menu__item">
           <a href="./pages/tobey-maguire/spiderman1.html">Tobey Maguire</a>
         </li>
-        <!-- Icone Aranha -->
+        <!-- SPIDER ICON -->
         <li class="s-menu__item s-menu__icon">
-            <img src="./assets/images/icons/spider.svg" alt="O ícone é uma aranha pequena cor branca">
+            <img src="./assets/images/icons/spider.svg" alt="Sombra branca de aranha pequena">
         </li>
         <li class="s-menu__item">
           <a href="./pages/tom-holland/spiderman1.html">Tom Holland</a>
@@ -34,22 +34,22 @@
 
     <!-- CARDS -->
     <main class="s-container">
-      <!-- DIV P/ PERSPECTIVA 3D -  TRANSFORM -->
+      <!-- DIV FOR PERSPECTIVE 3D - TRANSFORM -->
       <div class="s-cards-carousel" style="transform: translateZ(-40vw) rotateY(0deg);"> <!--manipular no JS - regex-->
         <!-- CARD 1 - TOBEY MAGUIRE -->
-        <a href="#" class="s-card" id="spider-man-01">
+        <a href="./pages/tobey-maguire/spiderman1.html" class="s-card" id="spider-man-01">
           <img class="s-card__background" src="/assets/images/pic-sm-bg-01.jpg">
           <img class="s-card__image" src="/assets/images/spider-man-01.png" alt="Tobey Maguire">
           <h2 class="s-card__title">Tobey Maguire</h2>
         </a>
         <!-- CARD 2 - TOM HOLLAND -->
-        <a href="#" class="s-card" id="spider-man-02">
+        <a href="./pages/tom-holland/spiderman1.html" class="s-card" id="spider-man-02">
           <img class="s-card__background" src="/assets/images/pic-sm-bg-02.jpg">
           <img class="s-card__image" src="/assets/images/spider-man-02.png" alt="Tom Holland">
           <h2 class="s-card__title">Tom Holland</h2>
         </a>
         <!-- CARD 3 - ANDREW GARFIELD -->
-        <a href="#" class="s-card" id="spider-man-03">
+        <a href="./pages/andrew-garfield/spiderman1.html" class="s-card" id="spider-man-03">
           <img class="s-card__background" src="/assets/images/pic-sm-bg-03.jpg">
           <img class="s-card__image" src="/assets/images/spider-man-03.png" alt="Andrew Garfield">
           <h2 class="s-card__title">Andrew Garfield</h2>
@@ -57,7 +57,7 @@
       </div>
     </main>
 
-    <!-- CONTROLADOR DE MENU / -->
+    <!-- CONTROLLER MENU -->
     <div class="s-controller">
       <div id="1" onclick="selectCarouselItem(this)" class="s-controller__button s-controller__button--active">
         01
@@ -71,11 +71,5 @@
       <div class="s-controller__line"></div>
     </div>
   </body>
+  <script src="/assets/scripts/script.js"></script>
 </html>
-
-
-
-
-<!-- https://www.youtube.com/watch?v=a29-lfFi9Qc 12/05/2022
-date: 13/05 | timer video: 01:38:06
-sujet: Commit - Diogo Início -->

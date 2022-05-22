@@ -1,5 +1,6 @@
 <h1 align="center"> SPIDER-MAN <img alt="Icone Aranha" title="Spider-Man" src="./assets/images/icons/spider.svg" width="50px"/> MULTIVERSO </h1>
-<p align="center"> Status <☕> Finalizado <☕/> 12 à 21 maio 2022 </p>
+<p align="center"> Status <☕> MVP de 12 à 21 maio 2022 <☕/></p> 
+<p align="center">TO DO: Responsividade + Tratamento de peso Imgs Gdes + WCAG</p>
 
 # 
 ### Descrição
@@ -17,7 +18,7 @@ https://www.youtube.com/watch?v=0IY5TJwAbcQ
   <tr>
     <td>
       <a href="https://debhvalois.github.io/spiderman-multiverso/" alt="Page" target="_blank">
-        <img src="./github/ReadmeGitHub.jpg" width="300px" alt="Print da Page"/>
+        <img src="./github/ReadmeGitHub.jpg" width="400px" alt="Print da Page"/>
       </a>
     </td>
   </tr>
@@ -30,7 +31,7 @@ https://www.youtube.com/watch?v=0IY5TJwAbcQ
   <tr>
     <td align="center">
       <a href="#">
-        <img src="./github/autora.jpg" width="100px" alt="Retrato de Debh"/><br>
+        <img src="./github/autora.jpg" width="200px" alt="Retrato de Debh"/><br>
         <sub>
           <b>Debh Valois</b>
         </sub>

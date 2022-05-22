@@ -11,24 +11,28 @@
   </head>
   <body>
 
-    <!-- INTERNAL PAGES LINKS -->
+    <!-- MENU: INTERNAL PAGES LINKS -->
     <nav class="s-menu">
       <ul>
         <li class="s-menu__item">
-          <a href="./index.html">Pagina Inicial</a>
+          <a href="./index.html"></a> <!-- retirei o btn mas mantive o link de retorno -->
         </li>
         <li class="s-menu__item">
-          <a href="./pages/tobey-maguire/spiderman1.html">Tobey Maguire</a>
+          <a href="./pages/tobey-maguire/spiderman1.html" target="_blank">Tobey Maguire</a>
         </li>
-        <!-- SPIDER ICON -->
+        <!-- SPIDER ICON 1 -->
         <li class="s-menu__item s-menu__icon">
             <img src="./assets/images/icons/spider.svg" alt="Sombra branca de aranha pequena">
         </li>
         <li class="s-menu__item">
-          <a href="./pages/tom-holland/spiderman1.html">Tom Holland</a>
+          <a href="./pages/tom-holland/spiderman1.html" target="_blank">Tom Holland</a>
         </li>
+        <!-- SPIDER ICON 2 -->
+        <li class="s-menu__item s-menu__icon">
+          <img src="./assets/images/icons/spider.svg" alt="Sombra branca de aranha pequena">
+      </li>
         <li class="s-menu__item">
-          <a href="./pages/andrew-garfield/spiderman1.html">Andrew Garfield</a>
+          <a href="./pages/andrew-garfield/spiderman1.html" target="_blank">Andrew Garfield</a>
         </li>
       </ul>
     </nav>
@@ -38,19 +42,19 @@
       <!-- DIV FOR PERSPECTIVE 3D - TRANSFORM -->
       <div class="s-cards-carousel" style="transform: translateZ(-40vw) rotateY(0deg);"> <!--manipular no JS - regex-->
         <!-- CARD 1 - TOBEY MAGUIRE -->
-        <a href="./pages/tobey-maguire/spiderman1.html" class="s-card" id="spider-man-01">
+        <a href="./pages/tobey-maguire/spiderman1.html" class="s-card" id="spider-man-01" target="_blank">
           <img class="s-card__background" src="./assets/images/pic-sm-bg-01.jpg">
           <img class="s-card__image" src="./assets/images/spider-man-01.png" alt="Tobey Maguire">
           <h2 class="s-card__title">Tobey Maguire</h2>
         </a>
         <!-- CARD 2 - TOM HOLLAND -->
-        <a href="./pages/tom-holland/spiderman1.html" class="s-card" id="spider-man-02">
+        <a href="./pages/tom-holland/spiderman1.html" class="s-card" id="spider-man-02" target="_blank">
           <img class="s-card__background" src="./assets/images/pic-sm-bg-02.jpg">
           <img class="s-card__image" src="./assets/images/spider-man-02.png" alt="Tom Holland">
           <h2 class="s-card__title">Tom Holland</h2>
         </a>
         <!-- CARD 3 - ANDREW GARFIELD -->
-        <a href="./pages/andrew-garfield/spiderman1.html" class="s-card" id="spider-man-03">
+        <a href="./pages/andrew-garfield/spiderman1.html" class="s-card" id="spider-man-03" target="_blank">
           <img class="s-card__background" src="./assets/images/pic-sm-bg-03.jpg">
           <img class="s-card__image" src="./assets/images/spider-man-03.png" alt="Andrew Garfield">
           <h2 class="s-card__title">Andrew Garfield</h2>
@@ -58,7 +62,7 @@
       </div>
     </main>
 
-    <!-- CONTROLLER MENU -->
+    <!-- CONTROLLER MENU - BOTTOM -->
     <div class="s-controller">
       <div id="1" onclick="selectCarouselItem(this)" class="s-controller__button s-controller__button--active">
         01

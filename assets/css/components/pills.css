@@ -6,9 +6,9 @@
 .pills ul li{
   background-color: var(--primary-color); /* VEIO DO GLOBAL.CSS */
   color: white;
-  padding: 5px 15px; /* ESPAÇO DAS BORDAS */
-  margin: 0 10px; /* ENTRE UM TEXTO E OUTRO */
-  border-radius: 20px;
+  padding: 0.3125rem 0.9375rem;  /* 5px 15px - ESPAÇO DAS BORDAS */
+  margin: 0 0.625rem; /* 10px ENTRE UM TEXTO E OUTRO */
+  border-radius: 1.25rem; /* 20px */
   text-transform: uppercase;
 }
 

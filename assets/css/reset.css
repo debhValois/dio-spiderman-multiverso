@@ -1,12 +1,11 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /* inseri para testes */
     vertical-align: baseline;
     list-style: none;
     border: 0;
     color: #FFF;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     text-decoration: none;
   }

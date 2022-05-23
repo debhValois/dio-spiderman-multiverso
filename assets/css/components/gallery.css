@@ -1,5 +1,5 @@
 .gallery {
-  padding: 20px;
+  padding: 1.25rem; /* 20px */
   padding-left: 0;
 }
 
@@ -9,14 +9,14 @@
 }
 
 .gallery ul li{
-  margin-left: 25px;
+  margin-left: 1.5625rem; /* 25px */
 }
 
 .gallery ul li:first-child{ /* PSEUDO CLASSE SÓ O 1º ITEM */
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .gallery ul li a img{ /* BORDA DA IMAGEM */
-  border:solid 6px white;
-  border-radius: 15px;
+  border:solid 0.4375rem white; /* 6px */
+  border-radius: 0.9375rem; /* 15px */
 }

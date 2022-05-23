@@ -31,7 +31,7 @@
   height: 100%; /* RELATIVO */
   width: 100%; /* ACOMPANHA SIZE DA DIV */
   /* background-color: gray; */
-  padding-left: 30px;
+  padding-left: 1.875rem; /* 30px */
   /* position: relative; */ /* ATIVAR QUANDO USAR A OPÇÃO 2 : VIDEO BCKGR */
 }
 
@@ -50,16 +50,16 @@
 }
 
 .s-wrapper .s-main-content .s-logo img{ /* LOGO SPIDER-MAN */
-  margin-top: 50px;
+  margin-top: 3.125rem; /* 50px */
   margin-left: 0;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem; /* 30px */
 }
 
 .s-wrapper .s-main-content__top .s-description{ /* TEXTO */
   background-color: rgba(0,0,0,.7); /* 70 DE OPACITY = LEVE TRANSPARÊNCIA */
   max-width: 50%;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem; /* 20px */
+  border-radius: 0.625rem; /* 10px */ 
 }
 
 .s-wrapper .s-main-content__top .s-description .s-description__text p{
@@ -68,11 +68,11 @@
 }
 
 .s-wrapper .s-main-content__top .s-description .pills{
-  margin-bottom: 20px; /* ESPAÇO ENTRE PILLS E DESCRIPTION */
+  margin-bottom: 1.25rem; /* ESPAÇO ENTRE PILLS E DESCRIPTION */
 }
 
 .s-wrapper .s-main-content .s-links{ /* BTN LINK TRAILLER */
-  padding: 20px;
+  padding: 1.25rem; /* 20px */
   padding-left: 0;
 }
 

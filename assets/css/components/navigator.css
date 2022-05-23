@@ -8,7 +8,7 @@
 }
 
 .navigator ul li { /* PARA ESPAÇAR OS ITENS */
-  margin: 60px 0; /* 60 = CIMA E BAIXO | 0 = ESQ DIR */
+  margin: 3.75rem 0; /* 60px = CIMA E BAIXO | 0 = ESQ DIR */
 }
 
 .navigator ul li:first-child { /* PSEUDOCLASSE */
@@ -22,8 +22,8 @@
 .navigator ul li a{ /* STYLE DA BOLINHA */
   color: white;
   border: solid 2px white;
-  width:45px;
-  height:45px;
+  width: 2.812rem; /* 45px */
+  height: 2.812rem; /* 45px */
   border-radius: 50%;
   background-color: black;
   display: flex;
@@ -35,7 +35,7 @@
   content: ''; /* ELEMENTO FANTASMA VAZIO */
   position: absolute;
   top: 0;
-  width: 2px;
+  width: 0.125rem; /* 2px */
   height: 100%;
   background-color: white;
   z-index: 0; /* FICAR ATRÁS DAS BOLINHAS */
@@ -54,5 +54,5 @@
 
 .navigator .navigator__icon{
   position: absolute;
-  top: -20px;
+  top: -1.25rem; /* -20px */
 }

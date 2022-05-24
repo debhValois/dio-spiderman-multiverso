@@ -28,9 +28,9 @@
 }
 
 .s-wrapper .s-main-content{
+  /* display: flex; */
   height: 100%; /* RELATIVO */
   width: 100%; /* ACOMPANHA SIZE DA DIV */
-  /* background-color: gray; */
   padding-left: 1.875rem; /* 30px */
   /* position: relative; */ /* ATIVAR QUANDO USAR A OPÇÃO 2 : VIDEO BCKGR */
 }
@@ -43,14 +43,14 @@
 }
 
 .s-wrapper .s-main-content__bottom{ /* GALERIA DE FOTOS */
-  height: 20vh; /* ALTURA 20% DA VIEW PORT */
   display: flex;
+  height: 20vh; /* ALTURA 20% DA VIEW PORT */
   flex-direction: column;
   justify-content: flex-end; /* ITENS DE BAIXO PARA CIMA */
-  box-sizing: border-box;
 }
 
 .s-wrapper .s-main-content .s-logo img{ /* LOGO SPIDER-MAN */
+  display: flex;
   margin-top: 3.125rem; /* 50px */
   margin-left: 0;
   margin-bottom: 1.875rem; /* 30px */
@@ -87,7 +87,7 @@
 /* 01 - TOBEY: 2002/2004/2007 */
 .s-spiderman-01-01 {
   background-image: url('../images/spiderman-tobey/movie-01/background.png');
-  background-size:cover;
+  background-size: cover;
 }
 
 .s-spiderman-01-02 {
@@ -103,7 +103,7 @@
 /* 02 - ANDREW: 2012/2014 */
 .s-spiderman-02-01 {
   background-image: url('../images/spiderman-andrew/movie-01/background.png');
-  background-size:cover;
+  background-size: cover;
 }
 
 .s-spiderman-02-02 {
@@ -114,7 +114,7 @@
 /* 03 - TOM: 2017/2019/2021 */
 .s-spiderman-03-01 {
   background-image: url('../images/spiderman-tom/movie-01/background.png');
-  background-size:cover;
+  background-size: cover;
 }
 
 .s-spiderman-03-02 {
@@ -127,10 +127,90 @@
   background-size: cover;
 }
 
+/* <<< MEDIA QUERIES >>> */
 
+/* BREAK-POINT 1 */
+@media only screen and (max-width: 1920px)  { /* and (max-height: 1080px) */
+      .s-wrapper .s-main-content .s-logo img{ /* LOGO SPIDER-MAN */
+        width: 55%;
+      }
+}
 
+/* BREAK-POINT 2 */
+@media only screen and (max-width: 1396px) { /* and (max-height: 822px) */
+        .s-wrapper .s-main-content .s-logo img{ /* LOGO SPIDER-MAN */
+        width: 50%;
+        }
+        .s-wrapper .s-main-content{
+        width: 100%;
+        }
+        .s-wrapper .s-main-content__bottom .gallery {
+          padding: 0.5rem; 
+        }
+        .s-wrapper .s-main-content__top .s-description .s-description__text p{
+          line-height: 110%; /* DISTÂNCIA ENTRE LINHAS NA CX TEXTO */
+        }
+        .s-wrapper .s-main-content .s-links{ /* BTN LINK TRAILLER */
+          padding: 0.50rem; 
+        }
+ }
 
+ /* BREAK-POINT 3 */
+ @media only screen and (max-width: 1346px) { /* and (max-height: 682px) */ 
+        .s-wrapper .s-left-column {
+        padding-left: 0.5rem; /* ESPAÇO LATERAL ESQUERDA DO ASIDE */
+        }
+        .s-wrapper .s-main-content__bottom { 
+          height: 30vh; /* ALTURA 19% DA VIEW PORT */
+        }
+        .s-wrapper .s-main-content__bottom .gallery ul li a img{
+          height: 70%; /* TAMANHO DA IMG DOS CARDS */
+          border:solid 0.1875rem white; /* 3px */
+          border-radius: 0.438rem; /* 7px */
+        }
+        .s-wrapper .s-main-content__bottom .gallery ul li{
+          margin-left: 0;
+          width: 45vh; /* DISTÂNCIA ENTRE CARDS */
+        }
+  } 
 
+  /* BREAK-POINT 4 */
+ @media only screen and (max-width: 1096px) { /* and (max-height: 661px) */
+      .s-wrapper .s-main-content__top .s-description{ /* TEXTO */
+        max-width: 65%;
+        max-height: 40%;
+        padding: 1rem;
+        border-radius: 0.325rem;  
+      }
+      .s-wrapper .s-main-content .s-links{ /* BTN LINK TRAILLER */
+        padding: 0.5rem; 
+      }
+      .s-wrapper .s-main-content__bottom .gallery ul li a img{
+        height: 68%; /* TAMANHO DA IMG DOS CARDS */
+      }
+ }
+ 
+/* BREAK-POINT 5 */
+ @media only screen and (max-width: 1030px) { /* and (max-height: 602px) */
+      
+      .s-wrapper .s-main-content .s-links{ /* BTN LINK TRAILLER */
+        padding: 1 rem; 
+      }
+      .s-wrapper .s-main-content__bottom { 
+        height: 30vh; /* ALTURA DA VIEW PORT */
+      }
+      .s-wrapper .s-main-content__bottom .gallery ul li a img{
+        height: 68%; /* TAMANHO DA IMG DOS CARDS */
+      }
+      .s-wrapper .s-main-content__bottom .gallery ul li{
+        margin-left: 0;
+        width: 50vh; /* DISTÂNCIA ENTRE CARDS */
+      }
+ }
+
+ /* BREAK-POINT 6 */ /* TRABALHAR A PARTIR DAQUI.... ESSE É O TAM MAX BOM ANTES DE QUEBRAR */
+ @media only screen and (max-width: 956px) { /* and (max-height: 571px) */
+ } 
 
 
 
